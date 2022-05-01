@@ -1,5 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300&display=swap");
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+}
+
+:root {
+	--blue: #5d5fef;
+	--pink: #ef5da8;
+	--green: #82f178;
+	--orange: #ef775d;
+	--balck: #000000;
+	--white: #ffffff;
+	--purple: #7928ca;
+}
+
+body {
+	padding: 2em;
+	display: flex;
+	gap: 4em;
+	justify-content: space-evenly;
+}
+
+.container {
+	display: flex;
+	gap: 1em;
+	height: fit-content;
+}
+
+.additional {
+	align-items: flex-start;
+	flex-direction: column;
+}
+
+.buttons {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	padding: 1.5em;
+	border: 2px dotted var(--blue);
+	border-radius: 8px;
+}
+
+.additional > .buttons {
+	padding: 0;
+}
+
+.rounded-buttons {
+	flex-direction: row;
+	border: none;
+	flex-wrap: wrap;
+}
+
+button {
+	width: 200px;
+	height: 60px;
+	background: none;
+	color: var(--white);
+	border: none;
+	border-radius: 8px;
+	display: grid;
+	place-items: center;
+	font-size: 1.2rem;
+}
+
+.rounded-buttons button,
+.gradient {
+	width: auto;
+	height: auto;
+	padding: 10px 18px;
+	border-radius: 20px;
+}
+
+.outline {
+	border: 2px solid var(--blue);
+}
+
+.outline,
+.plain {
+	color: var(--blue);
+}
+
+.icons {
+	align-self: flex-end;
+}
+
+.icons button {
+	width: auto;
+	height: auto;
+}
+
+#loadingBtn img {
+	height: 100%;
+}
+
+.secondary {
+	color: var(--purple);
+	background: #1c0631;
+}
+
+.success {
+	color: #17c964;
+	border: 2px solid #17c964;
+}
+
+.gradient {
+	color: white;
+	background: linear-gradient(112deg, rgb(255, 78, 205), var(--blue));
+}
+
+.rounded-buttons > .gradient {
+	padding: 3px !important;
+}
+
+.gradient > div {
+	height: 100%;
+	width: 100%;
+	border-radius: 17px;
+	background: var(--balck);
+	display: grid;
+	place-items: center;
+	padding: 5px 8px;
+}
+
+.primary {
+	background: #0070f3;
+}
+
+.warning {
+	color: #f5a623;
+	background: #3d2705;
+}
+
+.error {
+	color: #f21361;
+	border: 2px solid #f21361;
+}
+
+.mix-match {
+	border: none;
+}
+
+.mix-match button {
+	height: auto;
+	width: auto;
+	padding: 10px 18px;
+	display: flex;
+	gap: 12px;
+	border-radius: 12px;
+}
+
+.heart {
+	background: #f21361;
+	width: fit-content !important;
+}
+
+.lock {
+	background: #17c964;
+}
+
+.lock p {
+	margin-left: 27px;
+}
+
+.notification {
+	background: #7928ca;
+}
+
+.delete-user {
+	background: #3c0216;
+	color: #f21361;
+}
+
+.disabled {
+	background: rgb(44, 44, 44);
+	color: rgb(93, 93, 93);
+}
+
+@media screen and (max-width: 700px) {
+	body {
+		flex-direction: column;
+	}
 }
