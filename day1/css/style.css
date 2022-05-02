@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Inter";
+}
+
+:root {
+	--blue: #5d5fef;
+	--pink: #ef5da8;
+	--green: #82f178;
+	--orange: #ef775d;
+	--balck: #000000;
+	--white: #ffffff;
+}
+
+main {
+	padding: 2em;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	max-width: 70ch;
+	margin: auto;
+}
+
+.avatars-group {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 3em;
+}
+
+.avatars {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+}
+
+.avatars:nth-child(even) {
+	justify-content: flex-end;
+}
+
+.avatars-group img {
+	width: 50px;
+	height: 50px;
+}
+
+.bordered {
+	padding: 3px;
+	border: 2px solid;
+	border-radius: 50%;
+	width: 55px !important;
+	height: 55px !important;
+}
+
+.green-border {
+	border-color: var(--green);
+}
+
+.blue-border {
+	border-color: var(--blue);
+}
+
+.red-border {
+	border-color: var(--pink);
+}
+
+.dotted {
+	position: relative;
+}
+
+.dot {
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+	width: 8px;
+	height: 8px;
+	background: #c4c4c4;
+	border-radius: 50%;
+}
+
+.green-dot {
+	background: var(--green);
+}
+
+.red-dot {
+	background: var(--orange);
+}
+
+.overlapping {
+	margin-top: 1.5em;
+	transform: translateY(50%);
+}
+
+.overlapping > * {
+	border-radius: 50%;
+	border: 2px solid white;
+	margin-left: -25px;
+}
+
+.rounded {
+	width: 40px;
+	height: 40px;
+	display: grid;
+	place-items: center;
+	font-weight: 700;
+	color: #f7f7f7;
+	background: #5e5555;
+	font-size: 12px;
+}
+
+.displaced {
+	grid-column-start: 2;
+	grid-row-start: 4;
+}
+
+.avatarwithtext {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-weight: bold;
+	font-size: large;
+}
+
+.avatars-displaced {
+	grid-column-start: 1;
+	grid-row-start: 5;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.avatars-displaced img {
+	width: 40px;
+	height: 40px;
+}
+
+.avatars-displaced h3 {
+	font-weight: 700;
+	font-style: 12px !important;
+}
+
+.avatars-displaced p {
+	font-style: 10px;
+	font-weight: normal;
+}
+
+.avatarwithtext > div > h3 {
+	font-size: 12px;
+}
+
+.avatarwithtext > div > p {
+	font-size: 10px;
+}
