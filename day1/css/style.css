@@ -18,14 +18,9 @@
 
 main {
 	padding: 2em;
-	display: flex;
-	flex-direction: column;
 	gap: 1em;
 	max-width: 70ch;
 	margin: auto;
-}
-
-.avatars-group {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 3em;
@@ -37,11 +32,15 @@ main {
 	gap: 1em;
 }
 
+.big-small {
+	gap: 3em;
+}
+
 .avatars:nth-child(even) {
 	justify-content: flex-end;
 }
 
-.avatars-group img {
+main img {
 	width: 50px;
 	height: 50px;
 }
@@ -152,4 +151,14 @@ main {
 
 .avatarwithtext > div > p {
 	font-size: 10px;
+}
+
+@media screen and (max-width: 500px) {
+	main {
+		padding: 1em;
+		gap: 0.75em;
+	}
+	.big-small {
+		gap: 1em;
+	}
 }
