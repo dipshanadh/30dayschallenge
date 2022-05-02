@@ -26,15 +26,17 @@ This repository contains all the projects that I did during 30 days challenges. 
 
 -   Day 0
     Solutions: [https://github.com/dipshanadh/30dayschallenge/tree/master/day0](https://github.com/dipshanadh/30dayschallenge/tree/master/day0)
+    <br />
     Live demo : [https://dipshanadhikari.com.np/30dayschallenge/](https://dipshanadhikari.com.np/30dayschallenge/)
 
 -   Day 0
     Solutions: [https://github.com/dipshanadh/30dayschallenge/tree/master/day0](https://github.com/dipshanadh/30dayschallenge/tree/master/day0)
+    <br />
     Live demo : [https://dipshanadhikari.com.np/30dayschallenge/](https://dipshanadhikari.com.np/30dayschallenge/)
 
 ### What I learned
 
-thsiga I learned
+Things I learned...
 
 ### Useful resources
 
