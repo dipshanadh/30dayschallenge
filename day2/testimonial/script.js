@@ -1,6 +1,6 @@
-// variables
-
 // querySelectors
+
+// variables
 
 // eventListeners
 
