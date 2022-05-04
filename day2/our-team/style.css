@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	padding: 2em;
+}
+
+main {
+	max-width: 120ch;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+header {
+	display: flex;
+	gap: 1em;
+	justify-content: space-between;
+	margin-bottom: 2.5em;
+	flex-wrap: wrap;
+}
+
+header div {
+	width: 500px;
+}
+
+h1 {
+	font-family: "PT Serif", serif;
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 48px;
+	min-width: 300px;
+}
+
+h3 {
+	font-family: "Poppins", sans-serif;
+	text-transform: capitalize;
+	font-weight: 600;
+}
+
+header p {
+	font-size: 18px;
+	font-family: "Poppins", sans-serif;
+	line-height: 27px;
+}
+
+.cards {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2.5em;
+}
+
+.card img {
+	width: 100%;
+}
+
+.card .profession {
+	font-family: "PT Serif", serif;
+	font-weight: 400;
+	font-size: 12px;
+	text-transform: uppercase;
+	margin-top: 5px;
+}
+
+.card p {
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	font-size: 18px;
+}
+
+.displaced {
+	margin-top: 3em;
+}
+
+@media screen and (max-width: 700px) {
+	.cards {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.displaced {
+		margin: 0;
+	}
+
+	.card:nth-child(even) {
+		margin-top: 3em;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.cards {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.card:nth-child(even) {
+		margin: 0;
+	}
+}

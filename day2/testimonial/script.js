@@ -1,7 +1,0 @@
-// querySelectors
-
-// variables
-
-// eventListeners
-
-// functions
