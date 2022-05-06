@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Montserrat", sans-serif;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em 2em;
+	gap: 2em;
+	box-shadow: inset 0px -1px 0px #f1f1f1;
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+	background: white;
+	height: 100px;
+	overflow: hidden;
+	transition: height 2s ease;
+}
+
+.open {
+	height: auto;
+}
+
+nav .nav-head {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+nav h3 {
+	font-size: 39px;
+}
+
+nav .hamburger {
+	display: none;
+	height: 25px;
+	width: 25px;
+	cursor: pointer;
+	position: relative;
+	background: transparent;
+	border: none;
+	outline: none;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+	background: black;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 25px;
+	height: 3px;
+	transition: all 0.5s;
+}
+
+.hamburger-middle {
+	transform: translateY(7px);
+}
+
+.hamburger-bottom {
+	transform: translateY(14px);
+}
+
+.open .hamburger-top {
+	transform: rotate(45deg);
+}
+
+.open .hamburger-middle {
+	display: none;
+}
+
+.open .hamburger-bottom {
+	transform: rotate(-45deg);
+}
+
+.open .hamburger {
+	transform: translateY(7px);
+}
+
+ul,
+nav div {
+	display: flex;
+	gap: 1.5em;
+}
+
+ul li {
+	list-style: none;
+	text-transform: capitalize;
+}
+
+nav div {
+	gap: 0.75em;
+	font-size: larger;
+	font-weight: 500;
+}
+
+nav div > * {
+	cursor: pointer;
+}
+
+.mid {
+	height: 200vh;
+}
+
+.newsletter {
+	background: #0081fe20;
+	padding: 3em 1em;
+}
+
+.newsletter form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2em;
+	font-size: 18px !important;
+	font-family: Helvetica;
+}
+
+.newsletter form div,
+.newsletter form input {
+	background: #ffffff;
+	border-radius: 36px;
+}
+
+.newsletter form div {
+	position: relative;
+}
+
+.newsletter form label {
+	color: #0a142f;
+	font-weight: 600;
+}
+
+.newsletter form input,
+.newsletter form button {
+	border: none;
+	outline: none;
+}
+
+.newsletter form input {
+	padding: 1.75em 2em;
+	flex: 1;
+	width: 380px;
+	font-weight: 500;
+	color: #0a142f;
+}
+
+.newsletter form button {
+	position: absolute;
+	right: 0.75em;
+	top: 50%;
+	color: white;
+	background: #0081fe;
+	padding: 1em;
+	border-radius: 50%;
+	transform: translateY(-50%);
+	width: 46px;
+	height: 46px;
+}
+
+footer {
+	padding: 4em 2em;
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+	align-items: center;
+	font-family: Helvetica, sans-serif;
+	font-weight: normal;
+	background: #0081fe10;
+}
+
+footer ul {
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+footer .social {
+	display: flex;
+	gap: 1em;
+	font-size: x-large;
+}
+
+footer p {
+	color: #0a142f;
+	font-size: 18px;
+	mix-blend-mode: normal;
+	opacity: 0.65;
+	text-align: center;
+}
+
+.dark nav,
+.dark .newsletter label,
+.dark footer {
+	color: white;
+}
+
+.dark nav {
+	background: #000000;
+	box-shadow: inset 0px -1px 0px #f1f1f1;
+}
+
+.dark .mid {
+	background: rgb(86, 93, 110);
+}
+
+.dark .newsletter {
+	background: rgb(39, 48, 72);
+}
+
+.dark footer {
+	background: rgb(10, 20, 47);
+}
+
+.dark footer p {
+	color: #ffffff75;
+}
+
+.dark .hamburger span {
+	background: white;
+}
+
+@media screen and (max-width: 700px) {
+	nav {
+		padding: 1.5em 0;
+	}
+
+	nav .nav-head {
+		width: 100%;
+	}
+
+	nav,
+	nav ul {
+		flex-direction: column;
+	}
+
+	nav ul,
+	nav ul li {
+		width: 100%;
+		gap: 0;
+	}
+
+	nav ul li {
+		box-shadow: inset 0px -1px 0px #f1f1f1;
+		padding-top: 1em;
+		padding-bottom: 1em;
+		text-align: center;
+	}
+
+	nav ul li:hover {
+		background: #a5a6f6;
+	}
+
+	.dark nav ul li:hover {
+		background: #5d5fef;
+	}
+
+	nav .hamburger {
+		display: block;
+	}
+
+	.newsletter form {
+		flex-direction: column;
+		gap: 1em;
+	}
+
+	.newsletter form div input {
+		width: 350px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.newsletter form div input {
+		width: 250px;
+	}
+}

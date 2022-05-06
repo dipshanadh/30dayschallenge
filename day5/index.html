@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>
+			Day 5 | Navigation, Footer and Light/Dark mode | 30Days Challenge
+		</title>
+		<link rel="stylesheet" href="./style.css" />
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+		></script>
+	</head>
+	<body>
+		<nav>
+			<div class="nav-head">
+				<h3>Logo</h3>
+				<!-- Hmburger Icon -->
+				<button id="menuBtn" class="hamburger">
+					<span class="hamburger-top"></span
+					><span class="hamburger-middle"></span
+					><span class="hamburger-bottom"></span>
+				</button>
+			</div>
+
+			<ul>
+				<li>item</li>
+				<li>item</li>
+				<li>item</li>
+				<li>item</li>
+				<li>item</li>
+			</ul>
+
+			<div>
+				<ion-icon name="moon-outline" id="toggleBtn"></ion-icon>
+				<ion-icon name="person-outline"></ion-icon>
+				<ion-icon name="heart-outline"></ion-icon>
+				<ion-icon name="settings-outline"></ion-icon>
+			</div>
+		</nav>
+
+		<main>
+			<section class="mid"></section>
+			<section class="newsletter">
+				<form>
+					<label for="email">Newsletter</label>
+					<div>
+						<input
+							type="email"
+							name="email"
+							id="email"
+							placeholder="Your Email"
+						/>
+						<button>
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 20 20"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M0.540428 10.327C-0.206023 10.7186 -0.175056 11.2922 0.607525 11.6018L2.92623 12.5192C3.70946 12.8302 4.89462 12.6605 5.55849 12.1425L15.6275 4.20183C16.2895 3.68118 16.3604 3.75796 15.7856 4.37344L7.82559 12.8934C7.24882 13.507 7.41914 14.2605 8.20494 14.5644L8.47656 14.6702C9.26236 14.9741 10.543 15.4844 11.3237 15.8018L13.8953 16.8489C14.6766 17.1663 15.5114 16.7922 15.7333 15.9792L19.6527 1.5728C19.874 0.759892 19.4443 0.414731 18.6978 0.805698L0.540428 10.327Z"
+									fill="white"
+								/>
+								<path
+									d="M6.90366 19.7585C6.85785 19.8959 8.48947 17.3959 8.48947 17.3959C8.95076 16.6914 8.68882 15.8508 7.90947 15.5321L6.13011 14.8037C5.35076 14.485 4.97721 14.8592 5.29979 15.6379C5.29979 15.6379 6.95076 19.6172 6.90366 19.7585Z"
+									fill="white"
+								/>
+							</svg>
+						</button>
+					</div>
+				</form>
+			</section>
+			<footer>
+				<ul>
+					<li>Home</li>
+					<li>Experience</li>
+					<li>News</li>
+					<li>About us</li>
+					<li>Jobs</li>
+					<li>Contact</li>
+				</ul>
+				<div class="social">
+					<ion-icon name="logo-facebook"></ion-icon
+					><ion-icon name="logo-youtube"></ion-icon
+					><ion-icon name="logo-twitter"></ion-icon>
+				</div>
+				<p>© Copyright 2019 - Lift Media</p>
+			</footer>
+		</main>
+
+		<script src="./script.js"></script>
+	</body>
+</html>
