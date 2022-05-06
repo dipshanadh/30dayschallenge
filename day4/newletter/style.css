@@ -50,6 +50,20 @@ button {
 	padding: 3.5em;
 }
 
+.modal .envelope {
+	background: #4a3aff10;
+	border-radius: 51.5189px;
+	padding: 1em;
+	margin-left: auto;
+	margin-right: auto;
+	width: fit-content;
+}
+
+.modal .envelope img {
+	width: 100px;
+	height: 100px;
+}
+
 .modal h3 {
 	font-weight: 700;
 	font-size: 40px;
