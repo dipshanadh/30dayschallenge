@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Poppins:wght@500&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: grid;
+	place-items: center;
+	min-height: 100vh;
+}
+
+button {
+	background: #5d5fef;
+	border-radius: 8px;
+	border: none;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	font-size: 18px;
+	color: #ffffff;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+
+.modal-bg {
+	position: fixed;
+	width: 100vw;
+	min-height: 100vh;
+	background: #f8e8e8;
+	display: none;
+}
+
+.modal-container {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+}
+
+.modal {
+	font-family: "DM Sans", sans-serif;
+	background: #ffffff;
+	box-shadow: 0px 3.93591px 18.3676px rgba(74, 58, 255, 0.03),
+		0px -2.62394px 5.24789px rgba(20, 20, 43, 0.02),
+		0px 15.7437px 31.4873px rgba(20, 20, 43, 0.04);
+	border-radius: 41.9831px;
+	padding: 3.5em;
+}
+
+.modal h3 {
+	font-weight: 700;
+	font-size: 40px;
+	text-align: center;
+	color: #170f49;
+	margin-bottom: 0.25em;
+}
+
+.modal p {
+	font-weight: 400;
+	font-size: 20px;
+	text-align: center;
+	color: #6f6c90;
+	max-width: 600px;
+}
+
+.modal form {
+	background: #ffffff;
+	border: 1.31197px solid #eff0f7;
+	box-shadow: 0px 2.62394px 7.87183px rgba(19, 18, 66, 0.07);
+	border-radius: 78.7183px;
+	display: flex;
+	gap: 1em;
+	margin-top: 1.25em;
+	margin-bottom: 1.25em;
+	position: relative;
+}
+
+.modal input {
+	background: #ffffff;
+	border-radius: 78.7183px;
+	border: none;
+	outline: none;
+	flex: 1;
+	font-size: 20px;
+	color: #6f6c90;
+	padding: 1em;
+	width: 100%;
+}
+
+.modal button {
+	background: #4a3aff;
+	box-shadow: 0px 3.93591px 15.7437px rgba(74, 58, 255, 0.18);
+	border-radius: 73.4704px;
+	position: absolute;
+	right: 0.5em;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.modal .mark {
+	width: 50px;
+	height: 50px;
+	background: #82f178;
+	display: grid;
+	place-items: center;
+	border-radius: 50%;
+	margin: 1em auto;
+}
+
+.modal #close {
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	position: absolute;
+	top: 2em;
+	right: 3em;
+}
+
+.spam {
+	color: rgba(111, 108, 144, 0.6) !important;
+}
+
+.error {
+	color: red !important;
+	margin-bottom: 10px;
+}

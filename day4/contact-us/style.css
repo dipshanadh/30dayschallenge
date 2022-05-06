@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Work Sans", sans-serif;
+}
+
+main {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	min-height: 100vh;
+}
+
+form,
+.contact {
+	padding: 2em 5em;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+form {
+	background: #eff0f3;
+	gap: 1em;
+}
+
+h1 {
+	text-transform: capitalize;
+	font-weight: 600;
+	font-size: 64px;
+}
+
+form p {
+	font-size: 24px;
+	line-height: 28px;
+	letter-spacing: -0.01em;
+}
+
+input,
+textarea,
+.contact,
+button {
+	background: #fffffe;
+	padding: 1em;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	color: #0d0d0d;
+	font-size: 20px;
+}
+
+textarea {
+	height: 250px;
+	resize: none;
+}
+
+button {
+	background: #ff8e3c;
+	color: #ffffff;
+	font-size: 23px;
+	text-transform: capitalize;
+	cursor: pointer;
+}
+
+.error {
+	color: red;
+	font-size: larger;
+}
+
+.contact {
+	background: #fffffe;
+	align-items: center;
+	padding-bottom: 3em;
+}
+
+.contact .contact-details div {
+	font-size: 24px;
+	display: flex;
+	gap: 1em;
+	align-items: center;
+	word-wrap: wrap;
+}
+
+.contact .contact-details div:nth-child(2) {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+i {
+	color: #3da9fc;
+}
+
+@media screen and (max-width: 1000px) {
+	form,
+	.contact {
+		padding: 3em !important;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	main {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.contact img {
+		display: none;
+	}
+
+	form h1 {
+		font-size: 24px;
+	}
+
+	form p,
+	.contact p {
+		font-size: 14px;
+	}
+
+	input,
+	textarea,
+	.contact,
+	button {
+		padding: 10px;
+		font-size: 20px;
+	}
+
+	.textarea {
+		height: 180.62px;
+	}
+}
