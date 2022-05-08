@@ -34,6 +34,37 @@ This repository contains all the projects that I did during 30 days challenges. 
     <br />
     Live demo : [https://dipshanadhikari.com.np/30dayschallenge/](https://dipshanadhikari.com.np/30dayschallenge/day1)
 
+-   Day 1 | Avatars and Authors
+    Solutions: [https://github.com/dipshanadh/30dayschallenge/tree/master/day1](https://github.com/dipshanadh/30dayschallenge/tree/master/day1)
+    <br />
+    Live demo : [https://dipshanadhikari.com.np/30dayschallenge/](https://dipshanadhikari.com.np/30dayschallenge/day1)
+
+-   Day 1 | Avatars and Authors
+    Solutions: [https://github.com/dipshanadh/30dayschallenge/tree/master/day1](https://github.com/dipshanadh/30dayschallenge/tree/master/day1)
+    <br />
+    Live demo : [https://dipshanadhikari.com.np/30dayschallenge/](https://dipshanadhikari.com.np/30dayschallenge/day1)
+
+-   Day 1 | Avatars and Authors
+    Solutions: [https://github.com/dipshanadh/30dayschallenge/tree/master/day1](https://github.com/dipshanadh/30dayschallenge/tree/master/day1)
+    <br />
+    Live demo : [https://dipshanadhikari.com.np/30dayschallenge/](https://dipshanadhikari.com.np/30dayschallenge/day1)
+
+-   Day 1 | Avatars and Authors
+    Solutions: [https://github.com/dipshanadh/30dayschallenge/tree/master/day1](https://github.com/dipshanadh/30dayschallenge/tree/master/day1)
+    <br />
+    Live demo : [https://dipshanadhikari.com.np/30dayschallenge/](https://dipshanadhikari.com.np/30dayschallenge/day1)
+
+-   Day 1 | Avatars and Authors
+    Solutions: [https://github.com/dipshanadh/30dayschallenge/tree/master/day1](https://github.com/dipshanadh/30dayschallenge/tree/master/day1)
+    <br />
+    Live demo : [https://dipshanadhikari.com.np/30dayschallenge/](https://dipshanadhikari.com.np/30dayschallenge/day1)
+
+-   Day 1 | Avatars and Authors
+    Solutions: [https://github.com/dipshanadh/30dayschallenge/tree/master/day1](https://github.com/dipshanadh/30dayschallenge/tree/master/day1)
+    <br />
+    Live demo : [https://dipshanadhikari.com.np/30dayschallenge/](https://dipshanadhikari.com.np/30dayschallenge/day1)
+
+
 ### What I learned
 
 Things I learned...
