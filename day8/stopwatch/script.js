@@ -8,15 +8,12 @@ const time = document.querySelector(".time"),
 let hour = 0,
 	minutes = 0,
 	seconds = 0,
+	interval,
 	stoptime
 
 // eventListeners
-startBtn.addEventListener("click", () => {
-	start()
-})
-
+startBtn.addEventListener("click", start)
 pauseBtn.addEventListener("click", pause)
-
 resetBtn.addEventListener("click", reset)
 
 // functions
@@ -26,8 +23,10 @@ function start() {
 	// firstly setting the stoptime (our state) to false
 	stoptime = false
 
-	// increase the time every second
-	setInterval(increaseTime, 1000)
+	console.log("start")
+
+	// increasing the time every second
+	interval = setInterval(increaseTime, 1000)
 
 	// after starting the time, change the startBtn with pauseBtn
 	startBtn.style.display = "none"
@@ -43,12 +42,16 @@ function pause() {
 	stoptime == true
 		? (pauseBtn.textContent = "Resume")
 		: (pauseBtn.textContent = "Pause")
+
+	console.log("pause / resume")
 }
 
 // increasetime function
 function increaseTime() {
 	// increae the time if stoptime is false
 	if (stoptime == false) {
+		console.log("increaing")
+
 		// coverting the seconds, minutes and hours to intgers, because from line 70 to 80 we made them string and added 0 before them
 		seconds = parseInt(seconds)
 		minutes = parseInt(minutes)
@@ -65,7 +68,7 @@ function increaseTime() {
 		}
 
 		if (minutes == 60) {
-			hour = hour + 1
+			hour++
 			minutes = 0
 			seconds = 0
 		}
@@ -92,10 +95,17 @@ function reset() {
 	pauseBtn.style.display = "none"
 	startBtn.style.display = "block"
 
+	// clearing interval, so that it doesn't sppeds up after again staring
+	clearInterval(interval)
+
 	// resetting the innerHTML, the hours, minutes.... and the stoptime
 	time.innerHTML = "00:00:00"
 	stoptime = true
 	hour = 0
 	minutes = 0
 	seconds = 0
+
+	console.clear()
+
+	console.log("reset")
 }
