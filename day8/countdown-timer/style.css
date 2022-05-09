@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Source+Sans+Pro:wght@400;600&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--primary: #5d5fef;
+}
+
+body {
+	min-height: 100vh;
+	padding: 2em;
+	display: grid;
+	place-items: center;
+	background: var(--primary);
+}
+
+main {
+	padding: 5em 8em;
+	background: white;
+	border-radius: 14px;
+	width: fit-content;
+}
+
+h1 {
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	font-size: 36px;
+	line-height: 40px;
+	text-align: center;
+	margin-bottom: 3.25rem;
+}
+
+span {
+	color: var(--primary);
+}
+
+.countdown {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	font-family: "Source Sans Pro", sans-serif;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	line-height: 33px;
+	background: rgba(255, 255, 255, 0.2);
+	text-align: center;
+	gap: 1em;
+}
+
+.number {
+	color: var(--primary);
+	font-size: 64px;
+}
+
+.time-title {
+	font-family: "Source Sans Pro", sans-serif;
+	font-weight: 500;
+	font-size: 30px;
+	text-transform: uppercase;
+	margin-top: 27px;
+}
+
+@media only screen and (max-width: 800px) {
+	main {
+		padding: 2em;
+	}
+	.countdown {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 2em;
+	}
+}
