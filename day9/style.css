@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Inter", sans-serif;
+}
+
+:root {
+	--primary: #5d5fef;
+}
+
+body {
+	padding: 3em;
+	background: var(--primary);
+}
+
+main {
+	background: rgba(255, 255, 255, 0.58);
+	border-radius: 33px;
+	padding: 2.5em;
+}
+
+.options {
+	background: #7d81c5;
+	border-radius: 80px;
+	padding: 1em;
+	display: flex;
+	gap: 1em;
+	justify-content: space-evenly;
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.option {
+	background: var(--primary);
+	border-radius: 80px;
+	padding: 0.75rem 1.75rem;
+	font-weight: 500;
+	font-size: 24px;
+	color: #ffffff;
+}
+
+.active {
+	background: #1e2140;
+}
+
+.timer-container {
+	border-radius: 50%;
+	background: var(--primary);
+	width: 350px;
+	height: 350px;
+	margin: 2em auto 2em auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #ffffff;
+}
+
+.buttons {
+	display: flex;
+	gap: 18px;
+}
+
+button {
+	background: rgba(255, 255, 255, 0.15);
+	border-radius: 5px;
+	color: #ffffff;
+	border: none;
+	padding: 0.75rem 1em;
+	font-size: 1.25rem;
+	cursor: pointer;
+}
+
+.timer {
+	font-weight: 700;
+	font-size: 64px;
+	line-height: 116px;
+}
+
+.text {
+	color: var(--primary);
+	font-weight: 500;
+	margin-bottom: 8px;
+}
+
+p {
+	text-align: center;
+	font-size: 32px;
+	color: #1e2140;
+}
+
+p:not(.text) {
+	text-transform: uppercase;
+}
+
+#pause {
+	display: none;
+}
