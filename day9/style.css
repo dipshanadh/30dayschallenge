@@ -32,6 +32,7 @@ main {
 	width: fit-content;
 	margin-left: auto;
 	margin-right: auto;
+	flex-wrap: wrap;
 }
 
 .option {
@@ -78,13 +79,17 @@ button {
 .timer {
 	font-weight: 700;
 	font-size: 64px;
-	line-height: 116px;
+	margin-bottom: 1rem;
 }
 
-.text {
+#text {
 	color: var(--primary);
 	font-weight: 500;
 	margin-bottom: 8px;
+}
+
+#you-got {
+	display: none;
 }
 
 p {
@@ -99,4 +104,23 @@ p:not(.text) {
 
 #pause {
 	display: none;
+}
+
+@media screen and (max-width: 598px) {
+	.option {
+		width: 100%;
+	}
+
+	.options {
+		padding: 1.75em;
+	}
+
+	.timer {
+		font-size: 42px;
+	}
+
+	.timer-container {
+		width: 275px;
+		height: 275px;
+	}
 }

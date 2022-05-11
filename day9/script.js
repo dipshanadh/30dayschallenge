@@ -1,12 +1,14 @@
 // querySelectors
 const timer = document.querySelector(".timer"),
+	text = document.getElementById("text"),
+	youGot = document.getElementById("you-got"),
 	startBtn = document.getElementById("start"),
 	pauseBtn = document.getElementById("pause"),
 	resetBtn = document.getElementById("reset"),
 	options = document.querySelectorAll("[data-pomodoro]")
 
 // variables
-let mode = 25,
+let mode = "focus",
 	stoptime,
 	minutes = 25,
 	initialMinutes = 25,
@@ -25,6 +27,8 @@ options.forEach(option => {
 
 		// resetting
 		reset()
+		text.textContent = "Stay focused. Work hard. Keep griding!"
+		youGot.style.display = "none"
 	})
 })
 
@@ -44,13 +48,16 @@ function start() {
 	// after starting the time, change the startBtn with pauseBtn
 	startBtn.style.display = "none"
 	pauseBtn.style.display = "block"
+
+	text.textContent = "Stay focused. Work hard. Keep griding!"
+	youGot.style.display = "none"
 }
 
 // increasetime function
 function decreaseTime() {
 	// increae the time if stoptime is false
 	if (stoptime == false) {
-		// coverting the seconds, minutes and hours to intgers, because from line 70 to 80 we made them string and added 0 before them
+		// coverting the seconds, minutes and hours to intgers, as  we made them string and added 0 before them
 		seconds = parseInt(seconds)
 		minutes = parseInt(minutes)
 
@@ -58,14 +65,15 @@ function decreaseTime() {
 		seconds--
 
 		// increasing the minutes by one if seconds is 60. Same for minutes, hours..
-
 		if (minutes == 0 && seconds == 0) {
-			document.querySelector(".text").textContent =
-				"Congrats, keep going !"
+			if (mode == "focus") {
+				text.textContent = "Congrats, keep going !"
+				youGot.style.display = "block"
+			} else {
+				text.textContent = "Break is over !"
+			}
 
 			reset()
-
-			return
 		}
 
 		if (seconds < 0) {
@@ -91,9 +99,7 @@ function pause() {
 	stoptime = !stoptime
 
 	// if time is paused, then show resume, else pause
-	stoptime == true
-		? (pauseBtn.textContent = "Resume")
-		: (pauseBtn.textContent = "Pause")
+	pauseBtn.textContent = stoptime ? "Resume" : "Pause"
 }
 
 function reset() {
