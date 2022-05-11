@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Inter", sans-serif;
+}
+
+body {
+	background: #7879f1;
+	padding: 3em;
+	min-height: 100vh;
+	display: grid;
+}
+
+main {
+	border-radius: 28px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	border-radius: 28px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+main > div {
+	padding: 2em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+}
+
+.left {
+	background: #a5a6f6;
+	border-radius: 30px 0px 0px 30px;
+}
+
+h1 {
+	font-weight: 500;
+	font-size: 32px;
+}
+
+.preferences {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+.preferences input {
+	margin-right: 0.75em;
+}
+
+.right {
+	background: #5d5fef;
+	border-radius: 0px 30px 30px 0px;
+	color: white;
+}
+
+h2 {
+	font-weight: 600;
+	font-size: 20px;
+}
+
+.right > div {
+	align-items: center;
+	display: flex;
+}
+
+.password-container {
+	background: #fcddec;
+	justify-content: space-between;
+	width: 90%;
+	max-width: 35ch;
+}
+
+#copy,
+#length {
+	padding: 5px;
+	background: #a5a6f6;
+}
+
+#password {
+	padding-left: 16px;
+	font-weight: 500;
+	font-size: 20px;
+	color: black;
+}
+
+.length {
+	justify-content: center;
+	gap: 1rem;
+}
+
+#length {
+	padding: 10px 16px;
+	font-size: 20px;
+	color: #000;
+	font-weight: 600;
+	border: none;
+	outline: none;
+	width: 70px;
+	text-align: center;
+}
+
+button {
+	background: #ffffff;
+	border-radius: 8px;
+	padding: 10px 16px;
+	font-size: 16px;
+	color: #5d5fef;
+	outline: none;
+	border: none;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 850px) {
+	main {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.left,
+	.right {
+		border-radius: 0;
+	}
+
+	.left {
+		border-top-right-radius: 30px;
+		border-top-left-radius: 30px;
+	}
+
+	.right {
+		border-bottom-right-radius: 30px;
+		border-bottom-left-radius: 30px;
+	}
+}
+
+/* removning the scroll bar of number input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	/* display: none; <- Crashes Chrome on hover */
+	-webkit-appearance: none;
+	margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+	-moz-appearance: textfield; /* Firefox */
+}

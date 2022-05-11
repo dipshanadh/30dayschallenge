@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Day 10 | Random Password Generator | 30 Days Challenge</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<main>
+			<div class="left">
+				<h1>Preferences</h1>
+
+				<div class="preferences">
+					<label for="capital"
+						><input
+							type="checkbox"
+							name="capital"
+							id="uppercase"
+							checked
+						/>Include Capital Letters</label
+					><label for="small"
+						><input
+							type="checkbox"
+							name="small"
+							id="lowercase"
+							checked
+						/>Include Small Letters</label
+					><label for="number"
+						><input
+							type="checkbox"
+							name="number"
+							checked
+							id="numbers"
+						/>Include Numbers</label
+					><label for="symbol"
+						><input
+							type="checkbox"
+							name="symbols"
+							checked
+							id="symbols"
+						/>Include Symbols</label
+					>
+				</div>
+			</div>
+			<div class="right">
+				<h2>Random Password</h2>
+
+				<div class="password-container">
+					<div id="password"></div>
+					<div id="copy">
+						<img
+							src="./copy-to-clipboard-line.png"
+							style="width: 32px; height: 432x"
+						/>
+					</div>
+				</div>
+
+				<div class="length">
+					<h2>Length</h2>
+					<div class="input-wrap">
+						<span class="width-machine" aria-hidden="true"></span>
+						<input
+							class="number input"
+							value="8"
+							id="length"
+							type="number"
+						/>
+					</div>
+				</div>
+				<p id="error" style="display: none">
+					Please enter a number between 8 and 20
+				</p>
+				<button id="generate">Generate</button>
+			</div>
+		</main>
+
+		<script src="./script.js"></script>
+	</body>
+</html>
