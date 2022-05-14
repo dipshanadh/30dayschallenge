@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Day 13 | Image Gallery and Model | 30 DAYS CHALLENGE</title>
+
+		<!-- TailwindCSS CDN -->
+		<script src="https://cdn.tailwindcss.com"></script>
+
+		<!-- Custom CSS for tailwindCSS -->
+		<style type="text/tailwindcss">
+			@layer utilities {
+				main {
+					@apply grid grid-cols-2 md:grid-cols-3;
+				}
+				.modal-wrapper {
+					background: rgba(0, 0, 0, 0.74);
+					@apply fixed top-0 w-[100vw];
+				}
+				.modal-container {
+					@apply fixed top-0 w-[100vw] flex items-center justify-center z-10;
+				}
+				.modal-container img {
+					@apply z-20;
+				}
+				.modal-img {
+					max-width: 80%;
+					max-width: 100vh;
+				}
+			}
+		</style>
+
+		<!-- Our JS script -->
+		<script src="./script.js" defer></script>
+	</head>
+	<body>
+		<main></main>
+	</body>
+</html>
