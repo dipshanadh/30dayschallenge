@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DAY 13 | 30 DAYS PROJECTS SHOWOFF | 30 DAYS CHALLENGE</title>
+
+		<script src="https://cdn.tailwindcss.com"></script>
+		<style type="text/tailwindcss">
+			@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&display=swap");
+			@layer utilities {
+				nav,
+				.header {
+					font-family: "Libre Franklin", sans-serif;
+				}
+				main {
+					background: rgb(29, 25, 41);
+					min-height: 87.75vh;
+					@apply p-8 text-white;
+				}
+				.header {
+					@apply flex justify-between items-center;
+				}
+				.weeks {
+					@apply flex gap-4 text-xl;
+					cursor: pointer;
+				}
+				.active {
+					@apply font-semibold;
+					border-bottom: 3.5px solid;
+				}
+				.cards {
+					@apply flex flex-wrap mt-8 gap-7;
+				}
+				.card {
+					@apply bg-[#3E3069] relative w-[300px];
+				}
+				.card img {
+					@apply w-full h-[200px];
+				}
+				.card-body {
+					@apply p-4 flex flex-col gap-2;
+				}
+				.card-body > div {
+					@apply flex justify-between items-center;
+				}
+				.title {
+					@apply uppercase text-2xl font-medium mb-auto;
+				}
+				.tags {
+					@apply flex gap-2 flex-wrap;
+				}
+				.tags > .tag {
+					@apply capitalize px-2 py-1 rounded-md;
+				}
+				.tags > .tag:nth-child(odd) {
+					@apply bg-[#5DEF7D];
+				}
+				.tags > .tag:nth-child(even) {
+					@apply bg-[#EF5D80];
+				}
+				.tags + p {
+					@apply py-1.5 px-3 bg-white rounded-md text-[#5D5FEF] font-semibold;
+				}
+				.day {
+					@apply py-1 px-4 uppercase bg-[#1D1929] absolute top-2 right-2;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<nav
+			class="bg-[#030303] px-8 py-4 flex justify-between items-center text-[#e8e8ea]"
+		>
+			<img src="./img/Logo.png" class="" />
+
+			<ul id="links" class="flex gap-4 font-semibold">
+				<li>Rules</li>
+				<li>Portfolio</li>
+				<li>Challenge</li>
+			</ul>
+
+			<div class="flex gap-3">
+				<img src="./img/profile.png" width="48px" height="48px" />
+				<div>
+					<h3 class="font-semibold">Dipshan Adhikari</h3>
+					<p class="text-[#77757F]">dipshanadhikari1234@gmail.com</p>
+				</div>
+			</div>
+		</nav>
+
+		<main>
+			<div class="header">
+				<h1 class="text-xl font-bold">30 Days Challenge May 2022</h1>
+				<div class="weeks">
+					<div class="week active" data-week="0">Week 1</div>
+					<div class="week" data-week="1">Week 2</div>
+					<div class="week" data-week="2">Week 3</div>
+					<div class="week" data-week="3">Week 4</div>
+				</div>
+			</div>
+
+			<div class="cards">
+				<p class="text-3xl mt-8 error hidden">
+					Not there yet!
+					<br />
+					Stay tuned for updates
+				</p>
+				<div class="card" data-day="0">
+					<img src="./img/image 4.png" />
+					<div class="card-body">
+						<h4 class="title">buttons</h4>
+						<p class="font-sm">Tags:</p>
+						<div>
+							<div class="tags">
+								<div class="tag">Buttons</div>
+							</div>
+							<p>Live demo</p>
+						</div>
+					</div>
+					<div class="day">day 0</div>
+				</div>
+				<div class="card" data-day="1">
+					<img src="./img/image 4 (1).png" />
+					<div class="card-body">
+						<h4 class="title">avatars</h4>
+						<p class="font-sm">Tags:</p>
+						<div>
+							<div class="tags">
+								<div class="tag">avatars</div>
+								<div class="tag">authors</div>
+							</div>
+							<p>Live demo</p>
+						</div>
+					</div>
+					<div class="day">day 1</div>
+				</div>
+				<div class="card" data-day="2">
+					<img src="./img/image 4 (2).png" />
+					<div class="card-body">
+						<h4 class="title">testimonials</h4>
+						<p class="font-sm">Tags:</p>
+						<div>
+							<div class="tags">
+								<div class="tag">cards</div>
+								<div class="tag">carousel</div>
+							</div>
+							<p>Live demo</p>
+						</div>
+					</div>
+					<div class="day">day 2</div>
+				</div>
+				<div class="card" data-day="3">
+					<img src="./img/image 4 (3).png" />
+					<div class="card-body">
+						<h4 class="title">cards & tabs</h4>
+						<p class="font-sm">Tags:</p>
+						<div>
+							<div class="tags">
+								<div class="tag">cards</div>
+								<div class="tag">tabs</div>
+							</div>
+							<p>Live demo</p>
+						</div>
+					</div>
+					<div class="day">day 3</div>
+				</div>
+				<div class="card" data-day="4">
+					<img src="./img/image 4 (4).png" />
+					<div class="card-body">
+						<h4 class="title">contact us</h4>
+						<p class="font-sm">Tags:</p>
+						<div>
+							<div class="tags">
+								<div class="tag">contact</div>
+								<div class="tag">modal</div>
+							</div>
+							<p>Live demo</p>
+						</div>
+					</div>
+					<div class="day">day 4</div>
+				</div>
+				<div class="card" data-day="5">
+					<img src="./img/image 4 (5).png" />
+					<div class="card-body">
+						<h4 class="title">header & footer</h4>
+						<p class="font-sm uppercase">Tags:</p>
+						<div>
+							<div class="tags">
+								<div class="tag">header</div>
+								<div class="tag">footer</div>
+							</div>
+							<p>Live demo</p>
+						</div>
+					</div>
+					<div class="day">day 5</div>
+				</div>
+				<div class="card" data-day="6">
+					<img src="./img/image 4 (6).png" />
+					<div class="card-body">
+						<h4 class="title">personal blog</h4>
+						<p class="font-sm">Tags:</p>
+						<div>
+							<div class="tags">
+								<div class="tag">blog</div>
+								<div class="tag">responsive</div>
+							</div>
+							<p>Live demo</p>
+						</div>
+					</div>
+					<div class="day">day 6</div>
+				</div>
+				<div class="card" data-day="7">
+					<img src="./img/clock.PNG" />
+					<div class="card-body">
+						<h4 class="title">World Clock</h4>
+						<p class="font-sm">Tags:</p>
+						<div>
+							<div class="tags">
+								<div class="tag">clock</div>
+								<div class="tag">time</div>
+							</div>
+							<p>Live demo</p>
+						</div>
+					</div>
+					<div class="day">day 7</div>
+				</div>
+				<div class="card" data-day="8">
+					<img src="./img/countdown.PNG" />
+					<div class="card-body">
+						<h4 class="title">countdown timer</h4>
+						<p class="font-sm">Tags:</p>
+						<div>
+							<div class="tags">
+								<div class="tag">countdown</div>
+								<div class="tag">time</div>
+							</div>
+							<p>Live demo</p>
+						</div>
+					</div>
+					<div class="day">day 8</div>
+				</div>
+				<div class="card" data-day="9">
+					<img src="./img/stopwatch.PNG" />
+					<div class="card-body">
+						<h4 class="title">stopwatch</h4>
+						<p class="font-sm">Tags:</p>
+						<div>
+							<div class="tags">
+								<div class="tag">stopwatch</div>
+								<div class="tag">time</div>
+							</div>
+							<p>Live demo</p>
+						</div>
+					</div>
+					<div class="day">day 9</div>
+				</div>
+				<div class="card" data-day="10">
+					<img src="./img/pomodoro.png" />
+					<div class="card-body">
+						<h4 class="title">Pomodoro timer</h4>
+						<p class="font-sm">Tags:</p>
+						<div>
+							<div class="tags">
+								<div class="tag">pomodor</div>
+								<div class="tag">timer</div>
+							</div>
+							<p>Live demo</p>
+						</div>
+					</div>
+					<div class="day">day 10</div>
+				</div>
+				<div class="card" data-day="11">
+					<img src="./img/Desktop - Copied to Clipboard.png" />
+					<div class="card-body">
+						<h4 class="title">random password</h4>
+						<p class="font-sm">Tags:</p>
+						<div>
+							<div class="tags">
+								<div class="tag">random</div>
+							</div>
+							<p>Live demo</p>
+						</div>
+					</div>
+					<div class="day">day 11</div>
+				</div>
+				<div class="card" data-day="12">
+					<img src="./img/Faq simple.png" />
+					<div class="card-body">
+						<h4 class="title">faq accordian</h4>
+						<p class="font-sm">Tags:</p>
+						<div>
+							<div class="tags">
+								<div class="tag">accordian</div>
+							</div>
+							<p>Live demo</p>
+						</div>
+					</div>
+					<div class="day">day 12</div>
+				</div>
+				<div class="card" data-day="13">
+					<img src="./img/imgall.PNG" />
+					<div class="card-body">
+						<h4 class="title">Image Gallery</h4>
+						<p class="font-sm">Tags:</p>
+						<div>
+							<div class="tags">
+								<div class="tag">Image gallery</div>
+								<div class="tag">Modal</div>
+							</div>
+						</div>
+					</div>
+					<div class="day">day 13</div>
+				</div>
+				<div class="card" data-day="14">
+					<img src="./img/showoff.PNG" />
+					<div class="card-body">
+						<h4 class="title">Project showoff</h4>
+						<p class="font-sm">Tags:</p>
+						<div>
+							<div class="tags">
+								<div class="tag">cards</div>
+								<div class="tag">tabs</div>
+							</div>
+							<p>Live demo</p>
+						</div>
+					</div>
+					<div class="day">day 14</div>
+				</div>
+				<div class="card" data-day="15">
+					<img src="./img/Desktop - 1.png" />
+					<div class="card-body">
+						<h4 class="title">Input seperator</h4>
+						<p class="font-sm">Tags:</p>
+						<div>
+							<div class="tags">
+								<div class="tag">input seperator</div>
+							</div>
+							<p>Live demo</p>
+						</div>
+					</div>
+					<div class="day">day 15</div>
+				</div>
+			</div>
+		</main>
+
+		<script src="./script.js"></script>
+	</body>
+</html>
