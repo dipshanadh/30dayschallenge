@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Day 14 | Input separator | 30dayschalenge</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+
+		<style type="text/tailwindcss">
+			@layer utilities {
+				.tags {
+					@apply flex gap-4 flex-wrap;
+				}
+
+				.tag {
+					@apply relative px-4 py-2 text-white rounded-md font-medium;
+				}
+
+				.deleteBtn {
+					@apply p-1 absolute top-0 right-0 rounded-full bg-[#EF775D] translate-x-1.5 -translate-y-1.5 cursor-pointer;
+				}
+
+				.tag:nth-child(odd) {
+					@apply bg-[#D21212];
+				}
+				.tag:nth-child(even) {
+					@apply bg-[#7E12D2];
+				}
+				.tag:nth-child(3) {
+					@apply bg-[#1276D2];
+				}
+			}
+		</style>
+	</head>
+	<body class="p-16 bg-[#5D5FEF] min-h-screen grid place-items-center">
+		<main class="p-16 bg-[#A5A6F6] rounded-lg max-w-5xl">
+			<h1 class="text-3xl text-[#270343] font-semibold">
+				Enter a list seperated by comma or enter to add items to list
+			</h1>
+			<form class="flex gap-4 mt-5 mb-7 text-xl" autocomplete="off">
+				<input
+					type="text"
+					id="input"
+					class="px-4 py-2 rounded-md flex-1"
+					placeholder="random@email.com"
+					autocomplete="off"
+					autofocus
+				/>
+				<button
+					class="rounded-md text-white font-medium bg-[#1276D2] px-4 py-2"
+				>
+					Submit →
+				</button>
+			</form>
+			<div class="tags">
+				<div class="tag">
+					<div class="email">dipshan@gmail.com</div>
+					<div class="deleteBtn"><img src="./Vector.png" /></div>
+				</div>
+			</div>
+		</main>
+
+		<script src="./script.js"></script>
+	</body>
+</html>
