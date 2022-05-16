@@ -24,6 +24,10 @@ function checkKey(e) {
 }
 
 function update() {
+	let value = input.value
+
+	// removing the last character of input
+	input.value = value.slice(0, -1)
 	tags.innerHTML += `
                 <div class="tag">
 					<div class="email">${input.value}</div>
