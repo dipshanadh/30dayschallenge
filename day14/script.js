@@ -42,3 +42,6 @@ function deleteItem(e) {
 	const item = e.target.closest(".tag")
 	item.remove()
 }
+
+// clearing the tailwind warning message
+console.clear()
