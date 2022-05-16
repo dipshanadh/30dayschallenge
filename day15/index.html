@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DAY 15 | ADVISE GENERATOR | 30 DAYS CHALLENGE</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							lightCyan: "hsl(193, 38%, 86%)",
+							neonGreen: "hsl(150, 100%, 66%)",
+							grayishBlue: "hsl(217, 19%, 38%)",
+							darkGrayishBlue: "hsl(217, 19%, 24%)",
+							darkBlue: "hsl(218, 23%, 16%)",
+						},
+					},
+				},
+			}
+		</script>
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap");
+
+			* {
+				font-family: "Manrope", sans-serif;
+			}
+
+			#button:hover {
+				box-shadow: 0 0 20px hsl(150, 100%, 66%);
+			}
+		</style>
+	</head>
+	<body class="bg-darkBlue p-8 grid min-h-screen place-items-center">
+		<main
+			class="p-12 pb-16 flex flex-col items-center gap-8 bg-darkGrayishBlue rounded-2xl relative max-w-xl"
+		>
+			<p
+				id="id"
+				class="text-sm uppercase font-medium text-neonGreen tracking-widest"
+			>
+				advice
+			</p>
+			<p
+				id="advice"
+				class="text-2xl font-semibold text-lightCyan text-center leading-tight"
+			>
+				Loading advice...
+			</p>
+			<div
+				id="button"
+				class="p-3 bg-neonGreen rounded-full absolute bottom-0 translate-y-[50%] cursor-pointer ease-in-out duration-700 hover:rotate-180"
+			>
+				<img src="./img/icon-dice.svg" />
+			</div>
+			<img src="./img/pattern-divider-desktop.svg" />
+		</main>
+		<script src="./script.js"></script>
+	</body>
+</html>
