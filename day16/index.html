@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>URL shortener | Day 16 | 30dayschallenge</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							Cyan: "hsl(180, 66%, 49%)",
+							darkViolet: "hsl(257, 27%, 26%)",
+							Red: "hsl(0, 87%, 67%)",
+							Gray: "hsl(0, 0%, 75%)",
+							grayishViolet: "hsl(257, 7%, 63%)",
+							veryDarkBlue: "hsl(255, 11%, 22%)",
+							veryDarkViolet: "hsl(260, 8%, 14%)",
+						},
+					},
+				},
+			}
+		</script>
+		<style type="text/tailwindcss">
+			@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+			* {
+				font-family: "Poppins", sans-serif;
+			}
+			@layer utilities {
+				.card {
+					@apply p-4 flex flex-col sm:flex-row gap-2 sm:gap-5 bg-white rounded-md sm:items-center font-medium;
+				}
+				.card .url {
+					@apply text-veryDarkViolet hover:underline underline-offset-1 decoration-1;
+				}
+				.card .shortened {
+					@apply sm:ml-auto text-Cyan hover:underline underline-offset-1 decoration-1;
+				}
+				.card button {
+					@apply min-w-[100px];
+				}
+				.card .copied {
+					@apply bg-darkViolet;
+				}
+				form .err {
+					@apply absolute bottom-2 left-10 text-Red italic text-[16px];
+				}
+			}
+		</style>
+	</head>
+	<body class="p-5 sm:px-8 sm:py-12 bg-Gray">
+		<main class="flex flex-col gap-4 max-w-screen-lg mx-auto text-[18px]">
+			<form
+				class="p-8 sm:px-10 pb-10 flex flex-col sm:flex-row gap-4 rounded-lg bg-darkViolet bg-no-repeat bg-right-top relative"
+			>
+				<input
+					type="url"
+					name="url"
+					id="input"
+					class="py-2.5 px-4 flex-1 rounded-md outline-none border-Red"
+					placeholder="Shorten a link here..."
+				/>
+				<button
+					class="px-5 py-1.5 rounded-md bg-Cyan text-white"
+					id="submit"
+				>
+					Shorten it !
+				</button>
+				<div class="err hidden">Please add a link</div>
+			</form>
+			<div class="card">
+				<a
+					class="url"
+					href="https://www.dipshanadhikari.com.np/"
+					target="_blank"
+					>https://www.dipshanadhikari.com.np/</a
+				>
+				<a
+					class="shortened"
+					href="https://shrtco.de/5leGUJ"
+					target="_blank"
+					>https://shrtco.de/5leGUJ</a
+				>
+				<button
+					class="px-4 py-1.5 rounded-md bg-Cyan hover:bg-Cyan/75 text-white font-medium"
+					onclick="copyURL(event)"
+				>
+					Copy !
+				</button>
+			</div>
+		</main>
+		<script src="./script.js"></script>
+	</body>
+</html>
