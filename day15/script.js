@@ -2,10 +2,7 @@ const button = document.getElementById("button"),
 	id = document.getElementById("id"),
 	advice = document.getElementById("advice")
 
-button.addEventListener("click", e => {
-	console.log("Clicked !")
-	update()
-})
+button.addEventListener("click", update)
 
 function update() {
 	advice.textContent = "Loading advice..."
@@ -17,8 +14,6 @@ function update() {
 			id.textContent = `advice #${slip.id}`
 			advice.textContent = `"${slip.advice}"`
 		})
-
-	console.log("Loaded !")
 }
 
 update()
