@@ -65,28 +65,10 @@ function copyURL(e) {
 	e.target.classList.remove("bg-Cyan")
 	e.target.classList.remove("hover:bg-Cyan/75")
 	e.target.classList.add("bg-darkViolet")
-	e.target.textContent = "Copied !"
+	e.target.textContent = "Copying"
 
 	// copying url to clipboard
-	navigator.clipboard.writeText(url)
+	navigator.clipboard.writeText(url).then((e.target.textContent = "Copied !"))
 }
-
-// responsive image
-window.onresize = updateBGImg
-
-function updateBGImg() {
-	let width = window.innerWidth > 0 ? window.innerWidth : screen.width
-
-	if (width < 815) {
-		form.classList.remove("bg-[url('/images/bg-shorten-desktop.svg')]")
-		form.classList.add("bg-[url('/images/bg-shorten-mobile.svg')]")
-	} else {
-		form.classList.add("bg-[url('/images/bg-shorten-desktop.svg')]")
-		form.classList.remove("bg-[url('/images/bg-shorten-mobile.svg')]")
-	}
-}
-
-// immediately checking image and setting img
-updateBGImg()
 
 console.clear()
